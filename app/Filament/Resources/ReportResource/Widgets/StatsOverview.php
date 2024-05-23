@@ -16,10 +16,20 @@ class StatsOverview extends BaseWidget
         $cancelledReports = Report::where('status', 'Cancelled')->count();
 
         return [
-            Stat::make('Pending Reports', $pendingReports),
-            Stat::make('In Progress Reports', $inProgressReports),
-            Stat::make('Resolved Reports', $resolvedReports),
-            Stat::make('Cancelled Reports', $cancelledReports),
+            Stat::make('Pending Reports', $pendingReports)
+                ->icon('heroicon-m-exclamation-circle')
+                ->description('Attend to immediately!')
+                ->color('danger'),
+            Stat::make('In Progress Reports', $inProgressReports)
+                ->icon('heroicon-m-clock')
+                ->description('Please wait patiently')
+                ->color('warning'),
+            Stat::make('Resolved Reports', $resolvedReports)
+                ->icon('heroicon-m-check-circle')
+                ->description('Great job!')
+                ->color('success'),
+            Stat::make('Cancelled Reports', $cancelledReports)
+                ->icon('heroicon-m-x-circle'),
         ];
     }
 }

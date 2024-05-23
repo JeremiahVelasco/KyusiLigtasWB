@@ -13,10 +13,13 @@ return new class extends Migration
     {
         Schema::create('reports', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('user_id')->nullable();
+            $table->foreignId('citizen_id')->nullable();
+            $table->string('location');
             $table->string('department');
             $table->string('category');
             $table->string('station');
+            $table->text('message');
+            $table->string('video');
             $table->string('status');
             $table->timestamps();
         });

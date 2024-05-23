@@ -8,6 +8,8 @@ use App\Filament\Resources\ReportResource\Widgets\StatsOverview;
 use App\Models\Report;
 use Filament\Forms;
 use Filament\Forms\Components\Select;
+use Filament\Forms\Components\Textarea;
+use Filament\Forms\Components\TextInput;
 use Filament\Forms\Form;
 use Filament\Resources\Resource;
 use Filament\Tables;
@@ -21,12 +23,14 @@ class ReportResource extends Resource
 {
     protected static ?string $model = Report::class;
 
-    protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
+    protected static ?string $navigationIcon = 'heroicon-o-flag';
 
     public static function form(Form $form): Form
     {
         return $form
             ->schema([
+                TextInput::make('id')
+                    ->readOnly(),
                 Select::make('status')
                     ->options([
                         'Pending' => 'Pending',
@@ -34,6 +38,22 @@ class ReportResource extends Resource
                         'Resolved' => 'Resolved',
                         'Cancelled' => 'Cancelled'
                     ]),
+                TextInput::make('citizen_id')
+                    ->readOnly(),
+                TextInput::make('location'),
+                Select::make('department')
+                    ->options([
+                        'Fire' => 'Fire',
+                        'Medical' => 'Medical',
+                    ]),
+                Select::make('category')
+                    ->options([
+                        'Emergency Report' => 'Emergency Report',
+                        'Incident Report' => 'Incident Report',
+                    ]),
+                TextInput::make('station'),
+                Textarea::make('message'),
+                TextInput::make('video'),
             ]);
     }
 
@@ -42,9 +62,11 @@ class ReportResource extends Resource
         return $table
             ->columns([
                 TextColumn::make('id')
+                    ->numeric()
                     ->label('Report ID')
                     ->grow(false)
-                    ->searchable(),
+                    ->searchable()
+                    ->sortable(),
                 TextColumn::make('status')
                     ->grow(false)
                     ->badge()
@@ -122,5 +144,10 @@ class ReportResource extends Resource
         return [
             StatsOverview::class,
         ];
+    }
+
+    public static function getNavigationBadge(): ?string
+    {
+        return static::getModel()::count();
     }
 }

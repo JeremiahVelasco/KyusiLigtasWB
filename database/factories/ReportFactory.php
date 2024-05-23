@@ -17,10 +17,13 @@ class ReportFactory extends Factory
     public function definition(): array
     {
         return [
-            'user_id' => fake()->numberBetween(1234, 9999),
+            'citizen_id' => fake()->numberBetween(1234, 9999),
+            'location' => fake()->address(),
             'department' => fake()->randomElement(['Medical', 'Fire']),
             'category' => fake()->randomElement(['Emergency Report', 'Incident Report']),
             'station' => fake()->city(),
+            'message' => fake()->paragraph(2),
+            'video' => fake()->word() . '.mp4',
             'status' => fake()->randomElement(['Pending', 'In Progress', 'Resolved', 'Cancelled']),
         ];
     }
