@@ -8,14 +8,15 @@ use Filament\Tables\Columns\TextColumn;
 use Filament\Tables\Table;
 use Filament\Widgets\TableWidget as BaseWidget;
 
-class LatestReports extends BaseWidget
+class PendingReports extends BaseWidget
 {
+    protected static ?int $sort = 2;
     public function table(Table $table): Table
     {
-
         return $table
             ->query(
-                Report::query()
+                // TODO : check if this is sustainable
+                Report::where('status', 'Pending')->latest()
             )
             ->columns([
                 TextColumn::make('id')
