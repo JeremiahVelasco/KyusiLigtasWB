@@ -25,8 +25,8 @@ class ReportFactory extends Factory
             'message' => fake()->paragraph(2),
             'video' => fake()->word() . '.mp4',
             'status' => fake()->randomElement(['Pending', 'In Progress', 'Resolved', 'Cancelled']),
-            'lat' => fake()->latitude(),
-            'lng' => fake()->longitude(),
+            'lat' => fake()->latitude(4, 21),
+            'lng' => fake()->longitude(116, 127),
         ];
     }
 }
