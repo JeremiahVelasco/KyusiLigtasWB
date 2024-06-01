@@ -30,6 +30,10 @@ class UserResource extends Resource
             ->schema([
                 TextInput::make('name'),
                 TextInput::make('email'),
+                TextInput::make('password')
+                    ->default('password')
+                    ->revealable()
+                    ->password(),
                 CheckboxList::make('roles')
                     ->relationship('roles', 'name')
                     ->searchable()
