@@ -18,6 +18,7 @@ use Filament\Tables\Filters\SelectFilter;
 use Filament\Tables\Table;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
+use Cheesegrits\FilamentGoogleMaps\Fields\Map;
 
 class ReportResource extends Resource
 {
@@ -40,7 +41,6 @@ class ReportResource extends Resource
                     ]),
                 TextInput::make('citizen_id')
                     ->readOnly(),
-                TextInput::make('location'),
                 Select::make('department')
                     ->options([
                         'Fire' => 'Fire',
@@ -54,6 +54,7 @@ class ReportResource extends Resource
                 TextInput::make('station'),
                 Textarea::make('message'),
                 TextInput::make('video'),
+                Map::make('location'),
             ]);
     }
 

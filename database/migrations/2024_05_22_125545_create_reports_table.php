@@ -14,13 +14,15 @@ return new class extends Migration
         Schema::create('reports', function (Blueprint $table) {
             $table->id();
             $table->foreignId('citizen_id')->nullable();
-            $table->string('location');
             $table->string('department');
             $table->string('category');
             $table->string('station');
             $table->text('message');
             $table->string('video');
             $table->string('status');
+            // $table->string('location');
+            $table->decimal('lat', 10, 7);
+            $table->decimal('lng', 10, 7);
             $table->timestamps();
         });
     }
