@@ -8,9 +8,10 @@ use Filament\Tables\Columns\TextColumn;
 use Filament\Tables\Table;
 use Filament\Widgets\TableWidget as BaseWidget;
 
-class PendingReports extends BaseWidget
+class LiveReports extends BaseWidget
 {
     protected static ?int $sort = 3;
+    protected int | string | array $columnSpan = 2;
     public function table(Table $table): Table
     {
         return $table

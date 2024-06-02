@@ -59,7 +59,12 @@ class ReportResource extends Resource
                 TextInput::make('station'),
                 Textarea::make('message'),
                 TextInput::make('video'),
-                Map::make('location'),
+                Map::make('location')
+                    ->autocomplete(
+                        fieldName: 'location',
+                        types: ['airport'],
+                        placeField: 'name',
+                    ),
             ]);
     }
 
