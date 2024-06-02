@@ -57,7 +57,8 @@ class ReportResource extends Resource
                         'Incident Report' => 'Incident Report',
                     ]),
                 TextInput::make('station'),
-                Textarea::make('message'),
+                Textarea::make('message')
+                    ->readOnly(),
                 TextInput::make('video'),
                 Map::make('location')
                     ->autocomplete(
