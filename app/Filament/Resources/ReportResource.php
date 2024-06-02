@@ -7,6 +7,7 @@ use App\Filament\Resources\ReportResource\RelationManagers;
 use App\Filament\Resources\ReportResource\Widgets\IncidentLineGraph;
 use App\Filament\Resources\ReportResource\Widgets\StatsOverview;
 use App\Models\Report;
+use Cheesegrits\FilamentGoogleMaps\Fields\Geocomplete;
 use Filament\Forms;
 use Filament\Forms\Components\Select;
 use Filament\Forms\Components\Textarea;
@@ -20,6 +21,7 @@ use Filament\Tables\Table;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
 use Cheesegrits\FilamentGoogleMaps\Fields\Map;
+use Filament\Forms\Components\FileUpload;
 
 class ReportResource extends Resource
 {
@@ -31,8 +33,6 @@ class ReportResource extends Resource
     {
         return $form
             ->schema([
-                TextInput::make('id')
-                    ->readOnly(),
                 Select::make('status')
                     ->options([
                         'Pending' => 'Pending',
@@ -59,13 +59,13 @@ class ReportResource extends Resource
                 TextInput::make('station'),
                 Textarea::make('message')
                     ->readOnly(),
-                TextInput::make('video'),
+                FileUpload::make('video'),
+                FileUpload::make('recording'),
+                Geocomplete::make('location')
+                    ->isLocation()
+                    ->geocodeOnLoad(),
                 Map::make('location')
-                    ->autocomplete(
-                        fieldName: 'location',
-                        types: ['airport'],
-                        placeField: 'name',
-                    ),
+                    ->label('Pinned location'),
             ]);
     }
 

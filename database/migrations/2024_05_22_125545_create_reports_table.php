@@ -19,6 +19,7 @@ return new class extends Migration
             $table->string('station');
             $table->text('message');
             $table->string('video');
+            $table->string('recording');
             $table->string('status');
             $table->date('date');
             $table->time('time');

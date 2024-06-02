@@ -16,6 +16,7 @@ class Report extends Model
         'station',
         'message',
         'video',
+        'recording',
         'status',
         'date',
         'time',
