@@ -8,7 +8,9 @@ class ReportMapWidget extends MapWidget
 {
     protected static ?string $heading = 'Pending Reports Map';
 
-    protected static ?int $sort = 3;
+    protected static ?int $sort = 2;
+
+    protected int | string | array $columnSpan = 'full';
 
     protected static ?string $pollingInterval = null;
 
@@ -17,6 +19,8 @@ class ReportMapWidget extends MapWidget
     protected static ?bool $fitToBounds = true;
 
     protected static ?int $zoom = 12;
+
+    protected static ?int $contentHeight = 400;
 
     protected function getData(): array
     {

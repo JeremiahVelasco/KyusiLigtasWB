@@ -4,6 +4,7 @@ namespace App\Filament\Resources;
 
 use App\Filament\Resources\ReportResource\Pages;
 use App\Filament\Resources\ReportResource\RelationManagers;
+use App\Filament\Resources\ReportResource\Widgets\IncidentLineGraph;
 use App\Filament\Resources\ReportResource\Widgets\StatsOverview;
 use App\Models\Report;
 use Filament\Forms;
@@ -144,6 +145,7 @@ class ReportResource extends Resource
     {
         return [
             StatsOverview::class,
+            IncidentLineGraph::class,
         ];
     }
 
