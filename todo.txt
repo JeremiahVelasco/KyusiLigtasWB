@@ -1,4 +1,6 @@
-Progress Section
+Progress Section 
+June 2, 2024 = 72.28%
+
 
 DISPATCHER
 - 0.1.1 - Fill up login details = 0.25%
@@ -11,7 +13,7 @@ DISPATCHER
 - 0.2.3 - Resolved button = 0.43%
 - 0.2.4 - Cancelled button = 0.43%
 - 0.2.5 - Report list = 0.43%
-- 0.2.6 - 
+- 0.2.6 - Department incident rate graph = 0.43%
 - 0.2.7 - Pinned map = 0.43%
 
 - 0.3.1 - Pending reports list = 0.55%
@@ -55,7 +57,7 @@ DISPATCHER
 - 0.6.7 - 
 - 0.6.8 - 
 
-- 0.7.1 - 
+- 0.7.1 - Incident rate graph = 2%
 - 0.7.2 - Pinned map = 2%
 
 - 0.8.1 - Profile button = 0.22%
@@ -171,7 +173,7 @@ HEAD
 - 4.2.3 - Resolved button = 0.14%
 - 4.2.4 - Cancelled button = 0.14%
 - 4.2.5 - Report list = 0.14%
-- 4.2.6 - 
+- 4.2.6 - Department incident rate graph = 0.14%
 - 4.2.7 - Pinned map = 0.14%
 
 - 4.3.1 - Pending reports list = 0.13%
@@ -212,7 +214,7 @@ HEAD
 - 4.6.7 - 
 - 4.6.8 - 
 
-- 4.7.1 - 
+- 4.7.1 - Incident rate graph = 0.5%
 - 4.7.2 - Pinned map = 0.5%
 
 - 4.8.1 - Profile button = 0.22%
@@ -250,7 +252,7 @@ ADMIN
 - 5.2.3 - Resolved reports button = 0.14%
 - 5.2.4 - Cancelled reports button = 0.14%
 - 5.2.5 - Report list = 0.14%
-- 5.2.6 - 
+- 5.2.6 - Department incident rate graph = 0.14%
 - 5.2.7 - Pinned map = 0.14%
 
 - 5.3.1 - Pending reports list = 0.13%
@@ -291,7 +293,7 @@ ADMIN
 - 5.6.7 - 
 - 5.6.8 - 
 
-- 5.7.1 - 
+- 5.7.1 - Incident rate graph = 0.5%
 - 5.7.2 - Pinned map = 0.5%
 
 - 5.8.1 - Profile button = 0.08%
