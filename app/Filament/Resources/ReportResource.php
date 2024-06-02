@@ -60,7 +60,8 @@ class ReportResource extends Resource
                 Textarea::make('message')
                     ->readOnly(),
                 FileUpload::make('video'),
-                FileUpload::make('recording'),
+                FileUpload::make('recording')
+                    ->label('Voice Message'),
                 Geocomplete::make('location')
                     ->isLocation()
                     ->geocodeOnLoad(),
