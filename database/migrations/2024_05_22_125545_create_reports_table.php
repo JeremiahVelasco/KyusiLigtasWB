@@ -20,8 +20,8 @@ return new class extends Migration
             $table->text('message');
             $table->string('video');
             $table->string('status');
-            $table->string('date');
-            $table->string('time');
+            $table->date('date');
+            $table->time('time');
             $table->decimal('lat', 10, 7);
             $table->decimal('lng', 10, 7);
             $table->timestamps();

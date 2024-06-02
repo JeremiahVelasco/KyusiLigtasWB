@@ -2,6 +2,8 @@
 
 namespace App\Filament\Widgets;
 
+use App\Models\Report;
+use Carbon\Carbon;
 use Leandrocfe\FilamentApexCharts\Widgets\ApexChartWidget;
 
 class IncidentLineGraph extends ApexChartWidget
@@ -29,6 +31,22 @@ class IncidentLineGraph extends ApexChartWidget
      */
     protected function getOptions(): array
     {
+        // Get the current year
+        $currentYear = Carbon::now()->year;
+
+        // Initialize an array to hold the monthly data
+        $monthlyData = array_fill(0, 12, 0);
+
+        // Retrieve the reports and group by month
+        $reports = Report::selectRaw('MONTH(date) as month, COUNT(*) as count')
+            ->groupBy('month')
+            ->get();
+
+        // Populate the monthly data array
+        foreach ($reports as $report) {
+            $monthlyData[$report->month - 1] = $report->count;
+        }
+
         return [
             'chart' => [
                 'type' => 'line',
@@ -37,7 +55,7 @@ class IncidentLineGraph extends ApexChartWidget
             'series' => [
                 [
                     'name' => 'IncidentLineGraph',
-                    'data' => [2, 4, 6, 10, 14, 7, 2, 9, 10, 15, 13, 18],
+                    'data' => $monthlyData,
                 ],
             ],
             'xaxis' => [

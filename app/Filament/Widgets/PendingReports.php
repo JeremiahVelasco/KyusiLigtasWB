@@ -48,10 +48,12 @@ class PendingReports extends BaseWidget
                     ->grow(false)
                     ->searchable()
                     ->sortable(),
-                TextColumn::make('created_at')
+                TextColumn::make('date')
+                    ->searchable()
                     ->grow(false)
-                    ->label('Date & Time')
-                    ->dateTime()
+                    ->sortable(),
+                TextColumn::make('time')
+                    ->grow(false)
                     ->sortable(),
             ]);
     }
