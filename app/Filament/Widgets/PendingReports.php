@@ -16,7 +16,9 @@ class PendingReports extends BaseWidget
         return $table
             ->query(
                 // TODO : check if this is sustainable
-                Report::where('status', 'Pending')->latest()
+                Report::where('status', 'Pending')
+                    ->orWhere('status', 'In Progress')
+                    ->latest()
             )
             ->columns([
                 TextColumn::make('id')

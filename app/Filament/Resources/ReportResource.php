@@ -40,6 +40,10 @@ class ReportResource extends Resource
                         'Resolved' => 'Resolved',
                         'Cancelled' => 'Cancelled'
                     ]),
+                TextInput::make('date')
+                    ->readOnly(),
+                TextInput::make('time')
+                    ->readOnly(),
                 TextInput::make('citizen_id')
                     ->readOnly(),
                 Select::make('department')

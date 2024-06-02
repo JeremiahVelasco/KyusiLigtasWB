@@ -17,7 +17,8 @@ class Report extends Model
         'message',
         'video',
         'status',
-        // 'location',
+        'date',
+        'time',
         'lat',
         'lng'
     ];
