@@ -4,7 +4,7 @@ namespace App\Filament\Widgets;
 
 use Leandrocfe\FilamentApexCharts\Widgets\ApexChartWidget;
 
-class IncidentMapChart extends ApexChartWidget
+class IncidentLineGraph extends ApexChartWidget
 {
     protected static ?int $sort = 4;
     /**
@@ -12,14 +12,14 @@ class IncidentMapChart extends ApexChartWidget
      *
      * @var string
      */
-    protected static ?string $chartId = 'incidentMapChart';
+    protected static ?string $chartId = 'incidentLineGraph';
 
     /**
      * Widget Title
      *
      * @var string|null
      */
-    protected static ?string $heading = 'IncidentMapChart';
+    protected static ?string $heading = 'Incident Line Graph';
 
     /**
      * Chart options (series, labels, types, size, animations...)
@@ -31,18 +31,17 @@ class IncidentMapChart extends ApexChartWidget
     {
         return [
             'chart' => [
-                'type' => 'heatmap',
+                'type' => 'line',
                 'height' => 300,
             ],
             'series' => [
-                ['name' => 'Jan', 'data' => [[55, 70], [33, 42], [68, 40], [40, 48], [63, 19], [38, 23]]],
-                ['name' => 'Feb', 'data' => [[44, 38], [37, 47], [16, 52], [30, 27], [46, 55], [37, 13]]],
-                ['name' => 'Mar', 'data' => [[10, 42], [30, 16], [54, 34], [31, 47], [30, 31], [58, 60]]],
-                ['name' => 'Apr', 'data' => [[14, 60], [50, 30], [64, 13], [34, 32], [41, 23], [15, 70]]],
-                ['name' => 'May', 'data' => [[66, 69], [42, 20], [47, 34], [12, 37], [59, 29], [25, 60]]],
+                [
+                    'name' => 'IncidentLineGraph',
+                    'data' => [2, 4, 6, 10, 14, 7, 2, 9, 10, 15, 13, 18],
+                ],
             ],
             'xaxis' => [
-                'type' => 'category',
+                'categories' => ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
                 'labels' => [
                     'style' => [
                         'fontFamily' => 'inherit',
@@ -56,10 +55,10 @@ class IncidentMapChart extends ApexChartWidget
                     ],
                 ],
             ],
-            'dataLabels' => [
-                'enabled' => false,
-            ],
             'colors' => ['#f59e0b'],
+            'stroke' => [
+                'curve' => 'smooth',
+            ],
         ];
     }
 }
