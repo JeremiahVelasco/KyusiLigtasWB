@@ -74,6 +74,7 @@ class ReportResource extends Resource
                     ->searchable()
                     ->sortable(),
                 TextColumn::make('status')
+                    ->searchable()
                     ->grow(false)
                     ->badge()
                     ->color(fn (string $state): string => match ($state) {
@@ -94,10 +95,12 @@ class ReportResource extends Resource
                     ->grow(false)
                     ->searchable()
                     ->sortable(),
-                TextColumn::make('created_at')
+                TextColumn::make('date')
+                    ->searchable()
                     ->grow(false)
-                    ->label('Date & Time')
-                    ->dateTime()
+                    ->sortable(),
+                TextColumn::make('time')
+                    ->grow(false)
                     ->sortable(),
             ])
             ->filters([
