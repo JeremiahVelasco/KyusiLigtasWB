@@ -20,8 +20,8 @@ class CitizenFactory extends Factory
             'name' => fake()->name(),
             'email' => fake()->safeEmail(),
             'password' => bcrypt('password'),
-            'contact' => fake()->phoneNumber(),
-            'address' => fake()->address()
+            'contact' => fake()->mobileNumber(),
+            'address' => fake()->streetAddress() . ', Quezon City'
         ];
     }
 }
