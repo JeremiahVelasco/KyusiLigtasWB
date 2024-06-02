@@ -30,7 +30,8 @@ class AdminPanelProvider extends PanelProvider
             ->path('admin')
             ->login()
             ->brandName('Kyusi-Ligtas')
-            ->brandLogo('/storage/assets/logo.png')
+            ->brandLogo('/storage/assets/Logo.png')
+            ->favicon('/storage/assets/Logo.png')
             ->brandLogoHeight('4rem')
             ->colors([
                 'primary' => Color::Blue,
