@@ -1,11 +1,5 @@
-TO-DO 
-
-- Replace original dashboard page to change grid layout
-- Setup Google Maps API key
-
-
-
 Progress Section
+
 DISPATCHER
 - 0.1.1 - Fill up login details = 0.25%
 - 0.1.2 - Remember Me checkbox = 0.25%
@@ -77,6 +71,7 @@ FIRE RESPONDER
 - 2.1.2 - Remember Me checkbox = 0.25%
 - 2.1.3 - 
 - 2.1.4 - Login button = 0.25%
+
 - 2.2.2 - In progress reports button = 0.6%
 - 2.2.3 - Resolved button = 0.6%
 - 2.2.5 - Report list = 0.6%
