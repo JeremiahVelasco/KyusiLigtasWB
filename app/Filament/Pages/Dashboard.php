@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Providers\Filament;
+namespace App\Filament\Pages;
 
 use Filament\Http\Middleware\Authenticate;
 use Filament\Http\Middleware\DisableBladeIconComponents;
@@ -19,8 +19,12 @@ use Illuminate\Session\Middleware\StartSession;
 use Illuminate\View\Middleware\ShareErrorsFromSession;
 use Leandrocfe\FilamentApexCharts\FilamentApexChartsPlugin;
 
-class AdminPanelProvider extends PanelProvider
+class Dashboard extends \Filament\Pages\Dashboard
 {
+    public function getColumns(): int | string | array
+    {
+        return 3;
+    }
     public function panel(Panel $panel): Panel
     {
         return $panel
@@ -33,7 +37,9 @@ class AdminPanelProvider extends PanelProvider
             ])
             ->discoverResources(in: app_path('Filament/Resources'), for: 'App\\Filament\\Resources')
             ->discoverPages(in: app_path('Filament/Pages'), for: 'App\\Filament\\Pages')
-            ->pages([])
+            ->pages([
+                Pages\Dashboard::class,
+            ])
             ->discoverWidgets(in: app_path('Filament/Widgets'), for: 'App\\Filament\\Widgets')
             ->widgets([])
             ->middleware([
