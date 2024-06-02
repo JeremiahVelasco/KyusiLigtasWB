@@ -20,7 +20,7 @@ class ReportFactory extends Factory
             'citizen_id' => fake()->numberBetween(1234, 9999),
             'department' => fake()->randomElement(['Medical', 'Fire']),
             'category' => fake()->randomElement(['Emergency Report', 'Incident Report']),
-            'station' => fake()->city(),
+            'station' => fake()->randomElement(['Masambong Station', 'Congress Fire Station', 'Eastwood Fire Station', 'Pinagkaisahan Fire Station', 'Novaliches Fire Station', 'Baesa Fire Station', 'Argonix Medical Corporation', 'Stoutcon Emergency Response Services', 'East Avenue Medical Center', 'Novaliches District Hospital', 'PNP General Hospital', 'Quezon City General Hospital', 'Quirino Memorial Medical Center', 'Veterans Memorial Medical Center', 'Diliman Doctors Hospital, Inc.', 'St. Luke’s Medical Center']),
             'message' => fake()->paragraph(2),
             'video' => fake()->word() . '.mp4',
             'status' => fake()->randomElement(['Pending', 'In Progress', 'Resolved', 'Cancelled']),
