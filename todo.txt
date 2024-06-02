@@ -18,7 +18,7 @@ DISPATCHER
 - 0.2.4 - Cancelled button = 0.43%
 - 0.2.5 - Report list = 0.43%
 - 0.2.6 - 
-- 0.2.7 - 
+- 0.2.7 - Pinned map = 0.43%
 
 - 0.3.1 - Pending reports list = 0.55%
 - 0.3.2 - See details link = 0.55%
@@ -62,7 +62,7 @@ DISPATCHER
 - 0.6.8 - 
 
 - 0.7.1 - 
-- 0.7.2 - 
+- 0.7.2 - Pinned map = 2%
 
 - 0.8.1 - Profile button = 0.22%
 - 0.8.2 - Logout button = 0.22%
@@ -81,7 +81,7 @@ FIRE RESPONDER
 - 2.2.3 - Resolved button = 0.6%
 - 2.2.5 - Report list = 0.6%
 - 2.2.4 - 
-- 2.2.5 - 
+- 2.2.5 - Pinned map = 0.6%
 
 - 2.3.1 - In progress reports list = 0.54%
 - 2.3.2 - See details link = 0.54%
@@ -109,7 +109,7 @@ FIRE RESPONDER
 - 2.4.10 - 
 
 - 2.5.1 - 
-- 2.5.2 -  
+- 2.5.2 - Pinned map = 3%
 
 - 2.6.1 - Profile button = 0.67%
 - 2.6.2 - Logout button = 0.67%
@@ -128,7 +128,7 @@ MEDICAL RESPONDER
 - 3.2.3 - Resolved button = 0.6%
 - 3.2.5 - Report list = 0.6%
 - 3.2.4 - 
-- 3.2.5 - 
+- 3.2.5 - Pinned map = 0.6%
 
 - 3.3.1 - In progress reports list = 0.54%
 - 3.3.2 - See details link = 0.54%
@@ -156,7 +156,7 @@ MEDICAL RESPONDER
 - 3.4.10 - 
 
 - 3.5.1 - 
-- 3.5.2 -  
+- 3.5.2 - Pinned map = 3% 
 
 - 3.6.1 - Profile button = 0.67%
 - 3.6.2 - Logout button = 0.67%
@@ -177,7 +177,7 @@ HEAD
 - 4.2.4 - Cancelled button = 0.14%
 - 4.2.5 - Report list = 0.14%
 - 4.2.6 - 
-- 4.2.7 - 
+- 4.2.7 - Pinned map = 0.14%
 
 - 4.3.1 - Pending reports list = 0.13%
 - 4.3.2 - See details link = 0.13%
@@ -218,10 +218,7 @@ HEAD
 - 4.6.8 - 
 
 - 4.7.1 - 
-- 4.6.7 - 
-- 4.6.8 - 
-- 4.7.1 - 
-- 4.7.2 - 
+- 4.7.2 - Pinned map = 0.5%
 
 - 4.8.1 - Profile button = 0.22%
 - 4.8.2 - Logout button = 0.22%
@@ -245,3 +242,123 @@ HEAD
 - 4.11.1 - 
 
 - 4.12.1 - 
+
+
+ADMIN
+- 5.1.1 - Fill up login details = 0.25%
+- 5.1.2 - Remember me checkbox = 0.25%
+- 5.1.3 - 
+- 5.1.4 - Login button = 0.25%
+
+- 5.2.1 - Pending reports button = 0.14%
+- 5.2.2 - In progress reports button = 0.14%
+- 5.2.3 - Resolved reports button = 0.14%
+- 5.2.4 - Cancelled reports button = 0.14%
+- 5.2.5 - Report list = 0.14%
+- 5.2.6 - 
+- 5.2.7 - Pinned map = 0.14%
+
+- 5.3.1 - Pending reports list = 0.13%
+- 5.3.2 - See details link = 0.13%
+- 5.3.3 - Report information = 0.13%
+- 5.3.4 - View link = 0.13%
+- 5.3.5 - Close button = 0.13%
+- 5.3.6 - 
+- 5.3.7 - 
+- 5.3.8 - 
+
+- 5.4.1 - In progress reports list = 0.13%
+- 5.4.2 - See details link = 0.13%
+- 5.4.3 - Report information = 0.13%
+- 5.4.4 - View link = 0.13%
+- 5.4.5 - Close button = 0.13%
+- 5.4.6 - 
+- 5.4.7 - 
+- 5.4.8 - 
+
+- 5.5.1 - Resolved reports list = 0.1%
+- 5.5.2 - See details link = 0.1%
+- 5.5.3 - Report information = 0.1%
+- 5.5.4 - 
+- 5.5.5 - 
+- 5.5.6 - Close button = 0.1%
+- 5.5.7 - 
+- 5.5.8 - 
+- 5.5.9 - 
+- 5.5.10 - 
+
+- 5.6.1 - Cancelled reports list = 0.13%
+- 5.6.2 - See details link = 0.13%
+- 5.6.3 - Report information = 0.13%
+- 5.6.4 - View link = 0.13%
+- 5.6.5 - Close button = 0.13%
+- 5.6.6 - 
+- 5.6.7 - 
+- 5.6.8 - 
+
+- 5.7.1 - 
+- 5.7.2 - Pinned map = 0.5%
+
+- 5.8.1 - Profile button = 0.08%
+- 5.8.2 - Logout button = 0.08%
+- 5.8.3 - Dashboard button = 0.08%
+- 5.8.4 - Pending reports button = 0.08% 
+- 5.8.5 - In progress reports button = 0.08%
+- 5.8.6 - Resolved reports button = 0.08%
+- 5.8.7 - Cancelled reports button = 0.08%
+- 5.8.8 - 
+- 5.8.9 - 
+- 5.8.10 - QCitizen accounts button = 0.08%
+- 5.8.11 - QC 122 department accounts button = 0.08%
+- 5.8.12 - Fire depertment accounts button = 0.08%
+- 5.8.13 - Medical deparment accounts button = 0.08%
+
+- 5.9.1 - QCitizen account list = 0.12%
+- 5.9.2 - 
+- 5.9.3 - 
+- 5.9.4 - 
+- 5.9.5 - 
+- 5.9.6 - 
+- 5.9.7 - 
+- 5.9.8 - Edit button = 0.12%
+- 5.9.9 - Delete button = 0.12%
+- 5.9.10 - Account information = 0.12%
+- 5.9.11 - Update button = 0.12%
+- 5.9.12 - Close button = 0.12%
+- 5.9.13 - Fill up edit account form = 0.12%
+
+- 5.10.1 - QC 122 department accounts list = 0.14%
+- 5.10.2 - Add account button = 0.14%
+- 5.10.3 - Edit button = 0.14%
+- 5.10.4 - Delete button = 0.14%
+- 5.10.5 - Account information = 0.14% 
+- 5.10.6 - Create button = 0.14%
+- 5.10.7 - Close create account button = 0.14%
+- 5.10.8 - Fill up create account form = 0.14%
+- 5.10.9 - Update button = 0.14%
+- 5.10.10 - Close edit account button = 0.14%
+- 5.10.11 - Fill up edit account form = 0.14%
+
+- 5.11.1 - Fire department accounts list = 0.14%
+- 5.11.2 - Add account button = 0.14%
+- 5.11.3 - Edit button = 0.14%
+- 5.11.4 - Delete button = 0.14%
+- 5.11.5 - Account information = 0.14% 
+- 5.11.6 - Create button = 0.14%
+- 5.11.7 - Close create account button = 0.14%
+- 5.11.8 - Fill up create account button = 0.14%
+- 5.11.9 - Update button = 0.14%
+- 5.11.10 - Close edit account button = 0.14%
+- 5.11.11 - Fill up edit account form = 0.14%
+
+- 5.12.1 - Medical department accounts list = 0.14%
+- 5.12.2 - Add account button = 0.14%
+- 5.12.3 - Edit button = 0.14%
+- 5.12.4 - Delete button = 0.14%
+- 5.12.5 - Account information = 0.14% 
+- 5.12.6 - Create button = 0.14%
+- 5.12.7 - Close create account button = 0.14%
+- 5.12.8 - Fill up create account button = 0.14%
+- 5.12.9 - pdate button = 0.14%
+- 5.12.10 - Close edit account button = 0.14%
+- 5.12.11 - Fill up edit account form = 0.14%
