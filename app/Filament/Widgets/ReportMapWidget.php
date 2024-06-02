@@ -8,9 +8,7 @@ class ReportMapWidget extends MapWidget
 {
     protected static ?string $heading = 'Pending Reports Map';
 
-    protected int | string | array $columnSpan = 'full';
-
-    protected static ?int $sort = 2;
+    protected static ?int $sort = 3;
 
     protected static ?string $pollingInterval = null;
 
