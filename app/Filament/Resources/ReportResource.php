@@ -59,9 +59,10 @@ class ReportResource extends Resource
                 TextInput::make('station'),
                 Textarea::make('message')
                     ->readOnly(),
-                FileUpload::make('video'),
+                FileUpload::make('video')
+                    ->nullable(),
                 FileUpload::make('recording')
-                    ->label('Voice Message'),
+                    ->nullable(),
                 Geocomplete::make('location')
                     ->isLocation()
                     ->geocodeOnLoad(),
@@ -150,7 +151,6 @@ class ReportResource extends Resource
     {
         return [
             'index' => Pages\ListReports::route('/'),
-            'create' => Pages\CreateReport::route('/create'),
             'edit' => Pages\EditReport::route('/{record}/edit'),
         ];
     }
