@@ -19,6 +19,8 @@ class CitizenResource extends Resource
 {
     protected static ?string $model = Citizen::class;
 
+    protected static ?string $label = 'QCitizens';
+
     protected static ?string $navigationGroup = 'People Management';
 
     protected static ?string $navigationIcon = 'heroicon-o-users';
@@ -74,7 +76,6 @@ class CitizenResource extends Resource
     {
         return [
             'index' => Pages\ListCitizens::route('/'),
-            'create' => Pages\CreateCitizen::route('/create'),
             'edit' => Pages\EditCitizen::route('/{record}/edit'),
         ];
     }
