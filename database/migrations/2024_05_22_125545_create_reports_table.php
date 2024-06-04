@@ -16,10 +16,10 @@ return new class extends Migration
             $table->foreignId('citizen_id')->nullable();
             $table->string('department');
             $table->string('category');
-            $table->string('station');
-            $table->text('message');
-            $table->string('video');
-            $table->string('recording');
+            $table->string('station')->nullable();
+            $table->text('message')->nullable();
+            $table->string('video')->nullable();
+            $table->string('recording')->nullable();
             $table->string('status');
             $table->date('date');
             $table->time('time');
