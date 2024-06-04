@@ -31,6 +31,7 @@ class ReportController extends Controller
         $validated = $request->validate([
             'citizen_id' => 'required',
             'department' => 'required',
+            'category' => 'required',
             'location' => 'required',
             'message' => 'nullable',
             'video' => 'nullable',
