@@ -33,10 +33,17 @@ class ReportController extends Controller
             'department' => 'required',
             'location' => 'required',
             'message' => 'nullable',
-            'video' => 'nullable'
+            'video' => 'nullable',
+            'recording' => 'nullable',
+            'status' => 'nullable',
+            'date' => 'nullable',
+            'time' => 'nullable',
+            'lat' => 'nullable',
+            'lng' => 'nullable',
         ]);
 
-        $report = Report::create([]);
+        // $report = Report::create([]);
+        dd($validated);
     }
 
     /**
