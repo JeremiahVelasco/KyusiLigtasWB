@@ -13,7 +13,7 @@ class StatsOverview extends BaseWidget
     {
         $pendingReports = Report::where('status', 'Pending')->count();
         $inProgressReports = Report::where('status', 'In Progress')->count();
-        $resolvedReports = Report::where('status', 'In Progress')->count();
+        $resolvedReports = Report::where('status', 'Resolved')->count();
         $cancelledReports = Report::where('status', 'Cancelled')->count();
 
         return [
