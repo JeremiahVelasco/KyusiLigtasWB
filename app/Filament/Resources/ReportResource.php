@@ -167,4 +167,9 @@ class ReportResource extends Resource
     {
         return static::getModel()::where('status', 'Pending')->count();
     }
+
+    public static function canCreate(): bool
+    {
+        return false;
+    }
 }

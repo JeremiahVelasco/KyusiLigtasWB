@@ -84,4 +84,9 @@ class CitizenResource extends Resource
     {
         return static::getModel()::count();
     }
+
+    public static function canCreate(): bool
+    {
+        return false;
+    }
 }
